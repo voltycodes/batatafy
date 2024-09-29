@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -14,8 +14,28 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://batatafy.vercel.app/'),
   title: "batata-fy 🥔",
   description: "welcome to the batata battalion my friend",
+  openGraph: {
+    type: "website",
+    url: "https://batatafy.vercel.app",
+    title: "batata-fy 🥔",
+    description: "welcome to the batata battalion my friend",
+    images: "/og-image.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@voltycodes",
+    title: "batata-fy 🥔",
+    description: "welcome to the batata battalion my friend",
+    images: "/og-image.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: 'black',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({

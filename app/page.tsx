@@ -5,13 +5,13 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import {useDropzone} from 'react-dropzone'
 import Dialog from './components/dialog';
 
-const fileTypes = ["JPG", "PNG", "AVIF", "WEBP", "JPEG"];
+// const fileTypes = ["JPG", "PNG", "AVIF", "WEBP", "JPEG"];
 
 const ImageUploader = () => {
   const [image, setImage] = useState<File | null>(null);
   const [imageURL, setImageURL] = useState<string | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
-  const [dialogVisible, setDialogVisible] = useState(true);
+  const [dialogVisible, setDialogVisible] = useState(false);
 
   const onDrop = useCallback((acceptedFiles: any[]) => {
     const file = acceptedFiles[0];
